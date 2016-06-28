@@ -2,14 +2,14 @@
 While build the apps that serve users sometimes you are concern with the type of content sent to server. 
 Sometimes there are some images sent to server that contains nudity etc, in such cases you look forward for some rest API and then call it in each function.
 
-But now those old days are gone, here is flask-nsfw a simple flask extension built with Clarifai Api. 
-Just add a decorater before function and there you go.
-Currently flask-nsfw block images that are in form of multipart or base64.
+But now those old days are gone, here is flask-nsfw a simple flask extension built with Clarifai Api. <br/>
+Just add a decorater before function and there you go.<br/>
+Currently flask-nsfw block images that are in form of multipart or base64.<br/>
 
 To use flask-nsfw : 
-step 1: pip install flask-nsfw \n
-step 2: create account on clarifai \n
-step 3: Follow the example below. \n
+step 1: pip install flask-nsfw <br/>
+step 2: create account on clarifai <br/>
+step 3: Follow the example below. <br/>
 
 ```
 
