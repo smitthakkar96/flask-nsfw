@@ -10,7 +10,7 @@ step 1: pip install flask-nsfw
 step 2: create account on clarifai
 step 3: Follow the example below.
 
-'''
+```
 
 from flask import Flask
 from flask_nsfw import flask_nsfw
@@ -32,5 +32,5 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-'''
+```
 
