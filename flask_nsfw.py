@@ -11,7 +11,7 @@ except:
 
 clarifai_api = ClarifaiApi(model='nsfw-v1.0')
 
-class flask_nsfw(object):
+class NSFW(object):
     def __init__(self,app):
         self.app = app
         self.init_app(app)
@@ -23,7 +23,7 @@ class flask_nsfw(object):
         os.environ['CLARIFAI_APP_SECRET'] = app.config['CLIENT_APP_SECRET']
 
     @classmethod
-    def block_nsfw(*args, **kwargs):
+    def block(*args, **kwargs):
         def decorator(f):
             def wrapped_function(*args, **kwargs):
                 if request.method == 'POST':

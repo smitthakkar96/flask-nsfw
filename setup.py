@@ -9,14 +9,13 @@ from setuptools import setup
 
 setup(
     name='Flask-NSFW',
-    version='1.0',
-    url='http://example.com/flask-sqlite3/',
+    version='5.2',
     license='BSD',
     author='smit thakkar',
     author_email='smitthakkar96@gmail.com',
     description='Flask-NSFW blocks all the requests that contains images with nudity.',
     long_description=__doc__,
-    py_modules=['flask_nsfw'],
+    py_modules=['flask_nsfw','util'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
