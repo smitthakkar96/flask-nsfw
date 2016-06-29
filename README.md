@@ -14,7 +14,7 @@ step 3: Follow the example below. <br/>
 ```
 
 from flask import Flask
-from flask_nsfw import flask_nsfw
+from flask_nsfw import NSFW
 
 app = Flask(__name__)
 
@@ -22,10 +22,10 @@ app.config['CLIENT_APP_ID'] = '<Calrifai App ID>'
 app.config['CLIENT_APP_SECRET'] = 'Clarifai App Secret'
 
 
-nsfw = flask_nsfw(app)
+nsfw = NSFW(app)
 
 @app.route('/',methods=['POST'])
-@nsfw.block_nsfw()
+@nsfw.block()
 def index():
     return "Request contains no NSFW content"
 
