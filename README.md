@@ -35,3 +35,15 @@ if __name__ == '__main__':
 
 ```
 
+<hr/>
+
+<b>TODOS<b><br>
+1.Follow pep8 <br/>
+2. add support for put method - Done <br/>
+3. temp file (windows,linux) also developer can override it. - partly done <br/>
+4. separate the code that deals with api - Done <br/>
+5. Response 403, add reason too with file name and field name. - Done <br/>
+6. fix line no 37 remove none check - Done <br/>
+7. Developer docs later - Not now <br/>
+8. Convert to python3  <br/>
+9. file type encoding  <br/>
