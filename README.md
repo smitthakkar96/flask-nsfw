@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 <hr/>
 
-<b>TODOS<b><br>
+<b>TODOS</b><br>
 1.Follow pep8 <br/>
 2. add support for put method - Done <br/>
 3. temp file (windows,linux) also developer can override it. - partly done <br/>
