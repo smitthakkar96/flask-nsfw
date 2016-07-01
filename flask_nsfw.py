@@ -11,7 +11,7 @@ except:
 
 clarifai_api = ClarifaiApi(model='nsfw-v1.0')
 
-class NSFW(object):
+class flask_nsfw(object):
     def __init__(self,app):
         self.app = app
         self.init_app(app)
@@ -23,10 +23,10 @@ class NSFW(object):
         os.environ['CLARIFAI_APP_SECRET'] = app.config['CLIENT_APP_SECRET']
 
     @classmethod
-    def block(*args, **kwargs):
+    def block_nsfw(*args, **kwargs):
         def decorator(f):
             def wrapped_function(*args, **kwargs):
-                if request.method == 'POST':
+                if request.method == 'POST' or request.method == 'PUT':
                     if len(request.files.keys()) > 0:
                         for key in request.files:
                             result = clarifai_api.tag_images(request.files[key])
