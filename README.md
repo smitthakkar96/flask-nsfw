@@ -7,9 +7,9 @@ Just add a decorater before the function and you're done.<br/>
 Currently flask-nsfw blocks images that are in the form of multipart or base64.<br/>
 
 To use flask-nsfw : 
-step 1: pip install flask-nsfw <br/>
-step 2: create account on clarifai <br/>
-step 3: Follow the example below. <br/>
+Step 1: Run `pip install flask-nsfw` [(link here)](https://pypi.python.org/pypi/Flask-NSFW/1.0) <br/>
+Step 2: Create account on [Clarifai](http://developer.clarifai.com) <br/>
+Step 3: Follow the example below. <br/>
 
 ```
 
@@ -18,7 +18,7 @@ from flask_nsfw import NSFW
 
 app = Flask(__name__)
 
-app.config['CLIENT_APP_ID'] = '<Calrifai App ID>'
+app.config['CLIENT_APP_ID'] = '<Clarifai App ID>'
 app.config['CLIENT_APP_SECRET'] = 'Clarifai App Secret'
 
 
@@ -38,7 +38,7 @@ if __name__ == '__main__':
 <hr/>
 
 <b>TODOS</b><br>
-1.Follow pep8 <br/>
+1. Follow pep8 <br/>
 2. add support for put method - Done <br/>
 3. temp file (windows,linux) also developer can override it. - partly done <br/>
 4. separate the code that deals with api - Done <br/>
