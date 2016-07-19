@@ -1,5 +1,6 @@
 import base64
 
+
 def is_base64(s):
     s = ''.join([s.strip() for s in s.split("\n")])
     try:
@@ -9,6 +10,7 @@ def is_base64(s):
         return False
 
 from flask import jsonify
+
 
 class InvalidUsage(Exception):
     status_code = 400

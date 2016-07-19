@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='Flask-NSFW',
-    version='5.2',
+    version='5.2.1',
     license='BSD',
     author='smit thakkar',
     author_email='smitthakkar96@gmail.com',

@@ -13,14 +13,18 @@ except:
 
 clarifai_api = ClarifaiApi(model='nsfw-v1.0')
 
+
 class NSFW(object):
+
     def __init__(self, app):
         self.app = app
         self.init_app(app)
 
     def init_app(self, app):
-        assert app.config['CLIENT_APP_ID'] is not None, 'CLIENT_APP_ID seems to be missing'
-        assert app.config['CLIENT_APP_SECRET'] is not None, 'CLIENT_APP_SECRET seems to be missing'
+        assert app.config[
+            'CLIENT_APP_ID'] is not None, 'CLIENT_APP_ID seems to be missing'
+        assert app.config[
+            'CLIENT_APP_SECRET'] is not None, 'CLIENT_APP_SECRET seems to be missing'
         os.environ['CLARIFAI_APP_ID'] = app.config['CLIENT_APP_ID']
         os.environ['CLARIFAI_APP_SECRET'] = app.config['CLIENT_APP_SECRET']
 
@@ -28,15 +32,16 @@ class NSFW(object):
     def block(*args, **kwargs):
         def decorator(f):
             def wrapped_function(*args, **kwargs):
-                import pdb; pdb.set_trace()
                 if request.method == 'POST' or request.method == 'PUT':
                     result = True
                     if request.files:
-                        result = NSFW.testFilesAgainstApi(request.files.values())
+                        result = NSFW.testFilesAgainstApi(
+                            request.files.values())
                     elif request.json:
                         result = NSFW.testBase64Data(request.json.values())
-                    if result == False:
-                        return jsonify({"response":"seems like the request contains the images that contains nudity."}), 403
+                    if not result:
+                        return jsonify(
+                            {"response": "seems like the request contains the images that contains nudity."}), 403
                 resp = make_response(f(*args, **kwargs))
                 return resp
             return update_wrapper(wrapped_function, f)
