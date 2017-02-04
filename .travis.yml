@@ -2,11 +2,9 @@ language: python
 python: '3.5'
 env:
 - TOXENV=py35
-- TOXENV=flake8
-- TOXENV=docs
 install:
 - pip install -r requirements.txt
-script: pytest -c pytest.ini tests/test.py
+script: pytest pytest.ini tests/test.py
 deploy:
   provider: pypi
   user: smitthakkar96
@@ -15,3 +13,6 @@ deploy:
   on:
     tags: true
     branch: master
+env:
+   - CLARIFAI_APP_ID=xdObb0J7roCo_an5ahhezJrHyds_vfdHk35kzWyB
+   - CLARIFAI_APP_SECRET=UEovD-ppGwmhEXz7HBPdZBjT7iDslcisIl_M2qK7
