@@ -15,7 +15,7 @@ setup(
     author_email='smitthakkar96@gmail.com',
     description='Flask-NSFW blocks all the requests that contains images with nudity.',
     long_description=__doc__,
-    py_modules=['flask_nsfw','util'],
+    py_modules=['flask_nsfw', 'util'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
