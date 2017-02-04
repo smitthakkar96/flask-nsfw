@@ -3,6 +3,8 @@ Flask-NSFW is a wrapper around clarifai api that helps to prenvent the NSFW cont
 
 Currently flask-nsfw blocks images that are sents as multipart, base64 or url.<br/>
 
+[![Build Status](https://travis-ci.org/smitthakkar96/flask-nsfw.svg?branch=master)](https://travis-ci.org/smitthakkar96/flask-nsfw)
+
 To use flask-nsfw :
 Step 1: Run `pip install flask-nsfw` [(link here)](https://pypi.python.org/pypi/Flask-NSFW/1.0) <br/>
 Step 2: Create account on [Clarifai](http://developer.clarifai.com) <br/>
