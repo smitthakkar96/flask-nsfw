@@ -2,7 +2,7 @@
 Flask-NSFW
 -------------
 
-Flask-NSFW blocks all the requests that contains images with nudity
+Flask-NSFW blocks all the requests that contains images with nudity.
 """
 from setuptools import setup
 
