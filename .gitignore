@@ -2,3 +2,4 @@
 .pypirc
 *.cfg
 app.py
+__pycache__

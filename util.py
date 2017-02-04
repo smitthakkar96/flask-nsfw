@@ -1,18 +1,45 @@
+"""
+All the crazy utilites are present here
+"""
+
+
 import base64
+import binascii
+import re
 
 
-def is_base64(s):
-    s = ''.join([s.strip() for s in s.split("\n")])
+def is_base64(string):
+    """
+        Checks wether the given string is base64 or not
+    """
     try:
-        enc = base64.b64encode(base64.b64decode(s)).strip()
-        return enc == s
-    except TypeError:
+        base64.decodestring(str.encode(string))
+        return True
+    except binascii.Error:
         return False
 
-from flask import jsonify
+def is_url(string):
+    """
+        Used to check wether the given string is url or not
+    """
+    regex = re.compile(
+        r'^(?:http|ftp)s?://' # http:// or https://
+        r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|'
+        r'localhost|' #localhost...
+        r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' # ...or ip
+        r'(?::\d+)?' # optional port
+        r'(?:/?|[/?]\S+)$',
+        re.IGNORECASE)
+    url = regex.match(string)
+    if url:
+        return True
+    return False
 
 
 class InvalidUsage(Exception):
+    """
+        A custom Exception to trigger errors like 401, 400 etc
+    """
     status_code = 400
 
     def __init__(self, message, status_code=None, payload=None):
@@ -23,6 +50,10 @@ class InvalidUsage(Exception):
         self.payload = payload
 
     def to_dict(self):
-        rv = dict(self.payload or ())
-        rv['message'] = self.message
-        return rv
+        """
+            creates a dict containing an error message which is later converted to json
+        """
+        error = dict(self.payload or ())
+        error['message'] = self.message
+        return error
+

@@ -1,0 +1,4 @@
+{
+  "test.py::test_base64_data_with_nudity": true,
+  "test.py::test_base64_data_without_nudity": true
+}

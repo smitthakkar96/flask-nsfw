@@ -1,0 +1,17 @@
+language: python
+python: '3.5'
+env:
+- TOXENV=py35
+- TOXENV=flake8
+- TOXENV=docs
+install:
+- pip install -r requirements.txt
+script: pytest tests/test.py
+deploy:
+  provider: pypi
+  user: smitthakkar96
+  password:
+    secure: PxmUD5oXBBdZpCRpaqY4iE5Io/OTyTJgtGJfZjmGrE6I9Of6ugbLJyZkqIS/8V03/unsHNybJz3PvzBzMZJsH0HcVvwZhQp6W5JSeNNCuZVeY3faKOZqWCtV2bPZuC6vTB14l+8Za+iOxUF/PeWmXTB3Dw7LddFeg1yOCqS8D7FfmsR61R+wb+wrXcZoouIocp06BIRSUGQKKH2z+i1TiEHGb11P+kg1n94CVfO4xME3r7tPVdiY8diPhyfis6vvA8n4qKExOCLHZ9/i7/MSO7w0pS1n5X0Ec2GOtfP+d79FRAPWmkCLCzpWtj1jtDZ6t0Ct+X9f9PTQrxKtETugIoFdFfI3ZhxNAB5UvIJoHImuLcrIJf5k3QYMDKxgFLU8DF4JczHFeWSufs3efwLR4wkuuoqRbZOCF3NwpFU/G4ten5HgFOBRD6kaGGYgTBeHLK99AyWSuxYHnVI16HyE5b5mTyoAMRvkifMkdHLGoCon9sgjFRKFQiyEKM9rmTu7MNvFeOndT8FE2IyNIchnHMjISBXlRPq7hiYBW8FCOdq2/wVCyvPoPVWAqeEGZIEb7JHQbTW67bfPe8F1xEiHJyeflpXws+3mADHh2rrgLYyKAOVhxHzUoFKzo3h5XqUIFHMmzeZ/Q2DtAycPp2ISZtoFB0clfnRsLJZRz7OnAJ0=
+  on:
+    tags: true
+    branch: master
