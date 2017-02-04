@@ -4,12 +4,12 @@ env:
 - TOXENV=py35
 install:
 - pip install -r requirements.txt
-script: pytest tests/test.py
+script: py.test tests/test.py --cov=flask_nsfw.py
 before_install:
     - pip install pytest pytest-cov
     - pip install coveralls
 after_success:
-    - coveralls    
+    - coveralls
 deploy:
   provider: pypi
   user: smitthakkar96
