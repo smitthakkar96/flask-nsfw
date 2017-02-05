@@ -4,7 +4,7 @@ env:
 - TOXENV=py35
 install:
 - pip install -r requirements.txt
-script: py.test tests/test.py --cov=flask_nsfw.py
+script: py.test tests/test.py --cov=flask_nsfw
 before_install:
     - pip install pytest pytest-cov
     - pip install coveralls

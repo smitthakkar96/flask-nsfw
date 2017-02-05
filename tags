@@ -1,0 +1,83 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ClarifaiApi	flask_nsfw.py	/^from clarifai.client import ClarifaiApi$/;"	kind:namespace	line:11
+Flask	examples/app.py	/^from flask import Flask$/;"	kind:namespace	line:6
+InvalidUsage	util.py	/^class InvalidUsage(Exception):$/;"	kind:class	line:39
+NSFW	examples/app.py	/^from flask_nsfw import NSFW$/;"	kind:namespace	line:9
+NSFW	flask_nsfw.py	/^class NSFW(object):$/;"	kind:class	line:23
+NSFW	tests/test.py	/^from flask_nsfw import NSFW$/;"	kind:namespace	line:7
+NSFW_IMAGE	tests/data/samples.py	/^NSFW_IMAGE = open('tests\/data\/files\/nsfw.jpeg', "rb")$/;"	kind:variable	line:9
+NSFW_IMAGE_BASE64	tests/data/samples.py	/^NSFW_IMAGE_BASE64 = open('tests\/data\/files\/nsfw_b64', "r").read()$/;"	kind:variable	line:14
+NSFW_IMAGE_URL	tests/data/samples.py	/^NSFW_IMAGE_URL = 'http:\/\/xxx-picture.com\/wp-content\/uploads\/2016\/09\/Kriti-Kharbanda-Hardcore-Sex-Nude-Picss.jpg'$/;"	kind:variable	line:8
+SFW_IMAGE	tests/data/samples.py	/^SFW_IMAGE = open('tests\/data\/files\/random.png', "rb")$/;"	kind:variable	line:12
+SFW_IMAGE_BASE64	tests/data/samples.py	/^SFW_IMAGE_BASE64 = open('tests\/data\/files\/sfw_b64', "r").read()$/;"	kind:variable	line:15
+SFW_IMAGE_URL	tests/data/samples.py	/^SFW_IMAGE_URL = 'http:\/\/ichef.bbci.co.uk\/news\/660\/cpsprodpb\/37B5\/production\/_89716241_thinkstockphotos-523060154.jpg'$/;"	kind:variable	line:11
+__init__	flask_nsfw.py	/^    def __init__(self, app):$/;"	kind:member	line:25
+__init__	util.py	/^    def __init__(self, message, status_code=None, payload=None):$/;"	kind:member	line:45
+__init__.py	tests/__init__.py	1;"	kind:file	line:1
+__init__.py	tests/data/__init__.py	1;"	kind:file	line:1
+app	examples/app.py	/^app = Flask(__name__)$/;"	kind:variable	line:11
+app.py	examples/app.py	1;"	kind:file	line:1
+author	setup.py	/^    author='smit thakkar',$/;"	kind:variable	line:14
+author_email	setup.py	/^    author_email='smitthakkar96@gmail.com',$/;"	kind:variable	line:15
+base64	flask_nsfw.py	/^import base64$/;"	kind:namespace	line:8
+base64	tests/data/samples.py	/^import base64$/;"	kind:namespace	line:5
+base64	util.py	/^import base64$/;"	kind:namespace	line:6
+binascii	util.py	/^import binascii$/;"	kind:namespace	line:7
+block	flask_nsfw.py	/^    def block(self):$/;"	kind:member	line:38
+clarifai_api	flask_nsfw.py	/^clarifai_api = ClarifaiApi(model='nsfw-v1.0')$/;"	kind:variable	line:20
+classifiers	setup.py	/^    classifiers=[$/;"	kind:variable	line:27
+collect_urls	flask_nsfw.py	/^    def collect_urls(cls, data):$/;"	kind:member	line:97
+data	tests/test.py	/^import tests.data.samples as samples$/;"	kind:namespace	line:9
+decorator	flask_nsfw.py	/^        def decorator(func):$/;"	kind:function	line:42
+description	setup.py	/^    description='Flask-NSFW blocks all the requests that contains images with nudity.',$/;"	kind:variable	line:16
+flask_nsfw.py	flask_nsfw.py	1;"	kind:file	line:1
+include_package_data	setup.py	/^    include_package_data=True,$/;"	kind:variable	line:20
+index	examples/app.py	/^def index():$/;"	kind:function	line:21
+init_app	flask_nsfw.py	/^    def init_app(self, app):$/;"	kind:member	line:29
+install_requires	setup.py	/^    install_requires=[$/;"	kind:variable	line:22
+is_base64	util.py	/^def is_base64(string):$/;"	kind:function	line:11
+is_url	util.py	/^def is_url(string):$/;"	kind:function	line:21
+jsonify	flask_nsfw.py	/^from flask import request, jsonify$/;"	kind:namespace	line:10
+license	setup.py	/^    license='BSD',$/;"	kind:variable	line:13
+long_description	setup.py	/^    long_description=__doc__,$/;"	kind:variable	line:17
+name	setup.py	/^    name='Flask-NSFW',$/;"	kind:variable	line:11
+nsfw	examples/app.py	/^nsfw = NSFW(app)$/;"	kind:variable	line:17
+os	flask_nsfw.py	/^import os$/;"	kind:namespace	line:5
+os	tests/test.py	/^import os$/;"	kind:namespace	line:4
+platforms	setup.py	/^    platforms='any',$/;"	kind:variable	line:21
+py_modules	setup.py	/^    py_modules=['flask_nsfw', 'util'],$/;"	kind:variable	line:18
+pytest	tests/test.py	/^import pytest$/;"	kind:namespace	line:6
+re	util.py	/^import re$/;"	kind:namespace	line:8
+request	flask_nsfw.py	/^from flask import request, jsonify$/;"	kind:namespace	line:10
+samples	tests/test.py	/^import tests.data.samples as samples$/;"	kind:namespace	line:9
+samples.py	tests/data/samples.py	1;"	kind:file	line:1
+setup	setup.py	/^from setuptools import setup$/;"	kind:namespace	line:7
+setup.py	setup.py	1;"	kind:file	line:1
+stack	flask_nsfw.py	/^    from flask import _app_ctx_stack as stack$/;"	kind:namespace	line:16
+stack	flask_nsfw.py	/^    from flask import _request_ctx_stack as stack$/;"	kind:namespace	line:18
+status_code	util.py	/^    status_code = 400$/;"	kind:variable	line:43
+sys	examples/app.py	/^import sys$/;"	kind:namespace	line:4
+tempfile	flask_nsfw.py	/^import tempfile$/;"	kind:namespace	line:6
+test.py	tests/test.py	1;"	kind:file	line:1
+test_base64_data	flask_nsfw.py	/^    def test_base64_data(cls, data):$/;"	kind:member	line:109
+test_base64_data_with_nudity	tests/test.py	/^def test_base64_data_with_nudity():$/;"	kind:function	line:13
+test_base64_data_without_nudity	tests/test.py	/^def test_base64_data_without_nudity():$/;"	kind:function	line:19
+test_file_data_with_nudity	tests/test.py	/^def test_file_data_with_nudity():$/;"	kind:function	line:25
+test_file_data_without_nudity	tests/test.py	/^def test_file_data_without_nudity():$/;"	kind:function	line:31
+test_files_against_api	flask_nsfw.py	/^    def test_files_against_api(cls, data):$/;"	kind:member	line:80
+test_urls_against_api	flask_nsfw.py	/^    def test_urls_against_api(cls, urls):$/;"	kind:member	line:64
+test_urls_with_nudity	tests/test.py	/^def test_urls_with_nudity():$/;"	kind:function	line:37
+test_urls_without_nudity	tests/test.py	/^def test_urls_without_nudity():$/;"	kind:function	line:43
+tests	tests/test.py	/^import tests.data.samples as samples$/;"	kind:namespace	line:9
+to_dict	util.py	/^    def to_dict(self):$/;"	kind:member	line:52
+util	flask_nsfw.py	/^import util$/;"	kind:namespace	line:13
+util.py	util.py	1;"	kind:file	line:1
+version	setup.py	/^    version='5.2.1',$/;"	kind:variable	line:12
+wrapped	flask_nsfw.py	/^            def wrapped():$/;"	kind:function	line:44
+wraps	flask_nsfw.py	/^from functools import wraps$/;"	kind:namespace	line:7
+zip_safe	setup.py	/^    zip_safe=False,$/;"	kind:variable	line:19
