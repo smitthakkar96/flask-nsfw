@@ -6,15 +6,15 @@ install:
 - pip install -r requirements.txt
 script: py.test tests/test.py --cov=flask_nsfw
 before_install:
-    - pip install pytest pytest-cov
-    - pip install coveralls
+- pip install pytest pytest-cov
+- pip install coveralls
 after_success:
-    - coveralls
+- coveralls
 deploy:
   provider: pypi
   user: smitthakkar96
   password:
-    secure: PxmUD5oXBBdZpCRpaqY4iE5Io/OTyTJgtGJfZjmGrE6I9Of6ugbLJyZkqIS/8V03/unsHNybJz3PvzBzMZJsH0HcVvwZhQp6W5JSeNNCuZVeY3faKOZqWCtV2bPZuC6vTB14l+8Za+iOxUF/PeWmXTB3Dw7LddFeg1yOCqS8D7FfmsR61R+wb+wrXcZoouIocp06BIRSUGQKKH2z+i1TiEHGb11P+kg1n94CVfO4xME3r7tPVdiY8diPhyfis6vvA8n4qKExOCLHZ9/i7/MSO7w0pS1n5X0Ec2GOtfP+d79FRAPWmkCLCzpWtj1jtDZ6t0Ct+X9f9PTQrxKtETugIoFdFfI3ZhxNAB5UvIJoHImuLcrIJf5k3QYMDKxgFLU8DF4JczHFeWSufs3efwLR4wkuuoqRbZOCF3NwpFU/G4ten5HgFOBRD6kaGGYgTBeHLK99AyWSuxYHnVI16HyE5b5mTyoAMRvkifMkdHLGoCon9sgjFRKFQiyEKM9rmTu7MNvFeOndT8FE2IyNIchnHMjISBXlRPq7hiYBW8FCOdq2/wVCyvPoPVWAqeEGZIEb7JHQbTW67bfPe8F1xEiHJyeflpXws+3mADHh2rrgLYyKAOVhxHzUoFKzo3h5XqUIFHMmzeZ/Q2DtAycPp2ISZtoFB0clfnRsLJZRz7OnAJ0=
+    secure: SCJDW8YKZUdDc9uc1OLuoUSDkTmz8TO2xlGrCo2W8+OZwKwjfycccG+ez35hOj70J9e4oRfkYVGuOzkU5sgNx7GfPzfwwWb7pcRxZY+d6b/7PSlYQCH4D8wDki0ocby9O/XJ5E7eih2ejcVHU2KqSYMK7Itvhoj6wrEyFqjMvHyTbpu1WswttuGmBTOHrrAml5nS8gblCVxxjODrTPVh3iL5xhYqxxiFnMi5BH/V0ApGkRYp7htMbx0CDQtDfeJ8lLpIhEkdfi7x3rhqgxKJyLtdPEWK1Dym8NrlokDDX+bvhqBCLm5pm+ZbV1THC28Y0kEQre8zdJGh2sK1yEmppwwHlEXzO94/Qny+mgcgHNld14yf5ZPwwxNnzETV5/FwaFOngcxFjVmC/3QUKvp/V30bmg6IbknaCl76FM39FSNL2iNeJe5XKvjz40PeLJfWiDoO64BuLWjBKZpRApSQ84RWNLRy8fu5E3hMzvYV5LK08C4T0CSqi0xrqiPy9NWIISY+BvM0e2G31FcJ9GadnXHJ9lM8DWPXoo9Il44/NYyWv/UnvSziFiqTkC0vqF4R6cwl4TtRH7fezDwA113n+chrjtE9mL7IrYvp5kMn03SLx90hEWyS+m4lzxgahIVYbahVCDJUGpTmFbc4j6p19pTfhh9Rb5hbFqIxX+Xz43o=
   on:
     tags: true
     branch: master
